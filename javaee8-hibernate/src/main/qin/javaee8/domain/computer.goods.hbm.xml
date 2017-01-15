@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" package="qin.javaee8.domain" default-lazy="false">
+
+    <class name="ComputerGoods" table="tb_computerGoods8">
+        <id name="id" column="computerGoods_id" type="long">
+            <generator class="increment"/>
+        </id>
+
+        <!-- 商品编号 -->
+        <property name="goods_number" column="computer_goodsNumber" type="java.lang.Long"/>
+        <!-- 名称 -->
+        <property name="goods_name" column="computer_goodsName" length="100"/>
+        <!-- 价格 -->
+        <property name="goods_price" column="computer_goodsPrice" type="java.lang.Double"/>
+        <!-- 描述 -->
+        <property name="goods_description" column="computer_goodsDescription" length="9000"/>
+
+        <!-- 系统 -->
+        <property name="computer_os" length="20"/>
+        <!-- 分辨率 -->
+        <property name="computer_resolution" length="30"/>
+        <!-- 厚度 -->
+        <property name="computer_weight" length="30"/>
+        <!-- 内存 -->
+        <property name="computer_memory" length="30"/>
+        <!-- 显卡型号 -->
+        <property name="computer_graphicsModel" length="30"/>
+        <!-- 游戏性能 -->
+        <property name="computer_game" length="30"/>
+        <!-- 待机时长-->
+        <property name="computer_sleepTime" length="30"/>
+        <!-- 处理器 -->
+        <property name="computer_cpu" length="500"/>
+        <!-- 硬盘容量 -->
+        <property name="computer_hardDiskMemory" length="30"/>
+        <!-- 显存容量 -->
+        <property name="computer_displayMemory" length="30"/>
+        <!-- 屏幕尺寸 -->
+        <property name="computer_screenSize" length="30"/>
+
+        <map name="imagesMap" table="computerGoods_imagesMap" cascade="delete">
+            <key column="col_images_computer" foreign-key="fk_images_computer"></key>
+            <index column="col_images_index_computer" type="integer"/>
+            <element column="element_images_computer" type="string"/>
+        </map>
+
+        <join table="computerGoods_goodsType">
+            <key column="col_computerGoodsType" foreign-key="fk_computerGoodsType"></key>
+            <many-to-one name="computerGoodsType" cascade="delete"
+                         column="col_computerGoodsTypeMany2One" foreign-key="fk_computerGoodsTypeMany2One"
+                         class="GoodsType"/>
+        </join>
+
+    </class>
+
+</hibernate-mapping>

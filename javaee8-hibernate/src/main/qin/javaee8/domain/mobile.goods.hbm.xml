@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" package="qin.javaee8.domain" default-lazy="false">
+
+    <class name="MobileGoods" table="tb_mobileGoods8">
+        <id name="id" column="mobileGoods_id" type="long">
+            <generator class="increment"/>
+        </id>
+
+        <!-- 商品编号 -->
+        <property name="goods_number" column="mobile_goodsNumber" type="java.lang.Long"/>
+        <!-- 名称 -->
+        <property name="goods_name" column="mobile_goodsName" length="100"/>
+        <!-- 价格 -->
+        <property name="goods_price" column="mobile_goodsPrice" type="java.lang.Double"/>
+        <!-- 描述 -->
+        <property name="goods_description" column="mobile_goodsDescription" length="9000"/>
+
+        <!-- 系统 -->
+        <property name="mobile_os" length="20"/>
+        <!-- 内存 -->
+        <property name="mobile_memory" length="20"/>
+        <!-- 前置摄像头 -->
+        <property name="mobile_frontCamera" length="20"/>
+        <!-- 热点 -->
+        <property name="mobile_news" length="9000"/>
+        <!-- 后置摄像头 -->
+        <property name="mobile_backCamera" length="20"/>
+        <!-- 电池 -->
+        <property name="mobile_battery" length="50"/>
+        <!-- 机身内存 -->
+        <property name="mobile_rom" length="50"/>
+        <!-- 机身颜色 -->
+        <property name="mobile_color" length="20"/>
+
+        <map name="imagesMap" table="mobileGoods_imagesMap" cascade="delete">
+            <key column="col_images_mobile" foreign-key="fk_iages_mobile"></key>
+            <index column="col_images_index_mobile" type="integer"/>
+            <element column="element_images_mobile" type="string"/>
+        </map>
+
+        <join table="mobileGoods_goodsType">
+            <key column="col_mobileGoodsType" foreign-key="fk_mobileGoodsType"></key>
+            <many-to-one name="mobileGoodsType" cascade="delete"
+                         column="col_mobileGoodsTypeMany2One" foreign-key="fk_mobileGoodsTypeMany2One"
+                         class="GoodsType"/>
+        </join>
+
+    </class>
+
+</hibernate-mapping>

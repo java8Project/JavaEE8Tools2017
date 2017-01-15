@@ -1,0 +1,64 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../lib8/antlr-2.7.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/aspectjweaver-1.8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/cdi-api-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/classmate-1.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/el-api-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/geronimo-jta_1.1_spec-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/hibernate-commons-annotations-5.0.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/hibernate-core-5.2.5.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/hibernate-jpa-2.1-api-1.0.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/jandex-2.0.3.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/javassist-3.20.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/javax.inject-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/jboss-logging-3.3.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/jsr250-api-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/jstl-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-aop-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-aspects-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-beans-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-context-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-context-support-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-core-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-expression-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-instrument-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-instrument-tomcat-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-jdbc-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-jms-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-messaging-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-orm-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-oxm-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-test-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-tx-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-web-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-webmvc-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-webmvc-portlet-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/spring-websocket-4.3.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib8/tomcat-servlet-api-8.5.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/junit-4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/mysql-connector-java-5.1.35-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/slf4j-api-1.7.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/slf4j-log4j12-1.7.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/hamcrest-all-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/oracle-driver-ojdbc-12.1.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../libs/hamcrest-all-1.3-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/oracle-driver-ojdbc-12.1.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../libs/junit-4.11-src.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/slf4j-api-1.7.10-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/slf4j-log4j12-1.7.10-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../libs/hamcrest-all-1.3-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/log4j-1.2.17-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring435libs/spring-orm-4.3.5.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

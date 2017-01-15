@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JavaEE8Tools2017:war exploded">
+    <output-path>$PROJECT_DIR$/../../out/javaee82017/war</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JavaEE8Tools2017/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JavaEE8Tools2017" />
+          <element id="module-output" name="javaee8-core" />
+          <element id="module-output" name="javaee8-hibernate" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="libs" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

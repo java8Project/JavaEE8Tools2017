@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="8">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="javaee8_2017">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="destoon"/>
+    <schema id="4" parent="1" name="fzdzmh"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="java7book"/>
+    <schema id="7" parent="1" name="mem_mgr"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <schema id="9" parent="1" name="performance_schema"/>
+    <schema id="10" parent="1" name="sakila"/>
+    <schema id="11" parent="1" name="sys"/>
+    <schema id="12" parent="1" name="world"/>
+    <schema id="13" parent="1" name="dbshop"/>
+    <schema id="14" parent="1" name="javaee6"/>
+    <table id="15" parent="2" name="computergoods_goodstype"/>
+    <table id="16" parent="2" name="computergoods_imagesmap"/>
+    <table id="17" parent="2" name="computergoodsset_goodstype"/>
+    <table id="18" parent="2" name="goodstype_childrenset"/>
+    <table id="19" parent="2" name="hibernate_sequence"/>
+    <table id="20" parent="2" name="mobilegoods_goodstype"/>
+    <table id="21" parent="2" name="mobilegoods_imagesmap"/>
+    <table id="22" parent="2" name="mobilegoodsset_goodstype"/>
+    <table id="23" parent="2" name="tb_computergoods8"/>
+    <table id="24" parent="2" name="tb_goodstype8"/>
+    <table id="25" parent="2" name="tb_mobilegoods8"/>
+    <column id="26" parent="15" name="col_computerGoodsType">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="15" name="col_computerGoodsTypeMany2One">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="28" parent="15" name="fk_computerGoodsTypeMany2One">
+      <ColNames>col_computerGoodsTypeMany2One</ColNames>
+    </index>
+    <key id="29" parent="15" name="PRIMARY">
+      <ColNames>col_computerGoodsType</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="30" parent="15" name="fk_computerGoodsType">
+      <ColNames>col_computerGoodsType</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_computergoods8</RefTableName>
+      <RefColNames>computerGoods_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="31" parent="15" name="fk_computerGoodsTypeMany2One">
+      <ColNames>col_computerGoodsTypeMany2One</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_goodstype8</RefTableName>
+      <RefColNames>gook_pk</RefColNames>
+    </foreign-key>
+    <column id="32" parent="16" name="col_images">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="16" name="col_images_index">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="16" name="element_images">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="35" parent="16" name="PRIMARY">
+      <ColNames>col_images
+col_images_index</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="36" parent="16" name="fk_images">
+      <ColNames>col_images</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_computergoods8</RefTableName>
+      <RefColNames>computerGoods_id</RefColNames>
+    </foreign-key>
+    <column id="37" parent="17" name="goodsType_computerSet">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="17" name="computerGoodsSet_computerGoods_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="39" parent="17" name="UK_9i71p63rehpjt3v698dtq1urn">
+      <ColNames>computerGoodsSet_computerGoods_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="17" name="PRIMARY">
+      <ColNames>goodsType_computerSet
+computerGoodsSet_computerGoods_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="41" parent="17" name="UK_9i71p63rehpjt3v698dtq1urn">
+      <ColNames>computerGoodsSet_computerGoods_id</ColNames>
+      <UnderlyingIndexName>UK_9i71p63rehpjt3v698dtq1urn</UnderlyingIndexName>
+    </key>
+    <foreign-key id="42" parent="17" name="fk_computerGoodsSet">
+      <ColNames>goodsType_computerSet</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_goodstype8</RefTableName>
+      <RefColNames>gook_pk</RefColNames>
+    </foreign-key>
+    <foreign-key id="43" parent="17" name="FKot463puqp9wdp7vl98d1yy0a0">
+      <ColNames>computerGoodsSet_computerGoods_id</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_computergoods8</RefTableName>
+      <RefColNames>computerGoods_id</RefColNames>
+    </foreign-key>
+    <column id="44" parent="18" name="goodsType_childrenSet">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="18" name="childrenSet_gook_pk">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="46" parent="18" name="UK_76ojnv8bdx1xr60ft0xpq8ytt">
+      <ColNames>childrenSet_gook_pk</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="18" name="PRIMARY">
+      <ColNames>goodsType_childrenSet
+childrenSet_gook_pk</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="48" parent="18" name="UK_76ojnv8bdx1xr60ft0xpq8ytt">
+      <ColNames>childrenSet_gook_pk</ColNames>
+      <UnderlyingIndexName>UK_76ojnv8bdx1xr60ft0xpq8ytt</UnderlyingIndexName>
+    </key>
+    <foreign-key id="49" parent="18" name="fk_children">
+      <ColNames>goodsType_childrenSet</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_goodstype8</RefTableName>
+      <RefColNames>gook_pk</RefColNames>
+    </foreign-key>
+    <foreign-key id="50" parent="18" name="FKq9bf7tu2f7pxngya40olo6prh">
+      <ColNames>childrenSet_gook_pk</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_goodstype8</RefTableName>
+      <RefColNames>gook_pk</RefColNames>
+    </foreign-key>
+    <column id="51" parent="19" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="52" parent="20" name="col_mobileGoodsType">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="20" name="col_mobileGoodsTypeMany2One">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="54" parent="20" name="fk_mobileGoodsTypeMany2One">
+      <ColNames>col_mobileGoodsTypeMany2One</ColNames>
+    </index>
+    <key id="55" parent="20" name="PRIMARY">
+      <ColNames>col_mobileGoodsType</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="56" parent="20" name="fk_mobileGoodsType">
+      <ColNames>col_mobileGoodsType</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_mobilegoods8</RefTableName>
+      <RefColNames>mobileGoods_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="57" parent="20" name="fk_mobileGoodsTypeMany2One">
+      <ColNames>col_mobileGoodsTypeMany2One</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_goodstype8</RefTableName>
+      <RefColNames>gook_pk</RefColNames>
+    </foreign-key>
+    <column id="58" parent="21" name="col_images">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="21" name="col_images_index">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="21" name="element_images">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="61" parent="21" name="PRIMARY">
+      <ColNames>col_images
+col_images_index</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="62" parent="22" name="goodsType_mobileSet">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="22" name="mobileGoodsSet_mobileGoods_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="64" parent="22" name="UK_osgq4vrq7a0myghcxf0qfj4oe">
+      <ColNames>mobileGoodsSet_mobileGoods_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="22" name="PRIMARY">
+      <ColNames>goodsType_mobileSet
+mobileGoodsSet_mobileGoods_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="66" parent="22" name="UK_osgq4vrq7a0myghcxf0qfj4oe">
+      <ColNames>mobileGoodsSet_mobileGoods_id</ColNames>
+      <UnderlyingIndexName>UK_osgq4vrq7a0myghcxf0qfj4oe</UnderlyingIndexName>
+    </key>
+    <foreign-key id="67" parent="22" name="fk_mobileGoodsSet">
+      <ColNames>goodsType_mobileSet</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_goodstype8</RefTableName>
+      <RefColNames>gook_pk</RefColNames>
+    </foreign-key>
+    <foreign-key id="68" parent="22" name="FKg6aeh6ks2vli0db1atvj22mne">
+      <ColNames>mobileGoodsSet_mobileGoods_id</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_mobilegoods8</RefTableName>
+      <RefColNames>mobileGoods_id</RefColNames>
+    </foreign-key>
+    <column id="69" parent="23" name="computerGoods_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="23" name="computer_goodsNumber">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="71" parent="23" name="computer_goodsName">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="72" parent="23" name="computer_goodsPrice">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="73" parent="23" name="computer_goodsDescription">
+      <Position>5</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="74" parent="23" name="computer_os">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="75" parent="23" name="computer_resolution">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="76" parent="23" name="computer_weight">
+      <Position>8</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="77" parent="23" name="computer_memory">
+      <Position>9</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="78" parent="23" name="computer_graphicsModel">
+      <Position>10</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="79" parent="23" name="computer_game">
+      <Position>11</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="80" parent="23" name="computer_sleepTime">
+      <Position>12</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="81" parent="23" name="computer_cpu">
+      <Position>13</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="82" parent="23" name="computer_hardDiskMemory">
+      <Position>14</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="83" parent="23" name="computer_displayMemory">
+      <Position>15</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="84" parent="23" name="computer_screenSize">
+      <Position>16</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="85" parent="23" name="PRIMARY">
+      <ColNames>computerGoods_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="86" parent="24" name="gook_pk">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="24" name="goods_typeDescription">
+      <Position>2</Position>
+      <DataType>varchar(5000)|0</DataType>
+    </column>
+    <column id="88" parent="24" name="goods_typeName">
+      <Position>3</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="89" parent="24" name="goodsType_parentId">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="90" parent="24" name="fk_parent">
+      <ColNames>goodsType_parentId</ColNames>
+    </index>
+    <key id="91" parent="24" name="PRIMARY">
+      <ColNames>gook_pk</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="92" parent="24" name="fk_parent">
+      <ColNames>goodsType_parentId</ColNames>
+      <RefSchemaName>javaee8_2017</RefSchemaName>
+      <RefTableName>tb_goodstype8</RefTableName>
+      <RefColNames>gook_pk</RefColNames>
+    </foreign-key>
+    <column id="93" parent="25" name="mobileGoods_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="25" name="mobile_goodsNumber">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="95" parent="25" name="mobile_goodsName">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="96" parent="25" name="mobile_goodsPrice">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="97" parent="25" name="mobile_goodsDescription">
+      <Position>5</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="98" parent="25" name="mobile_os">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="99" parent="25" name="mobile_memory">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="100" parent="25" name="mobile_frontCamera">
+      <Position>8</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="101" parent="25" name="mobile_news">
+      <Position>9</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="102" parent="25" name="mobile_backCamera">
+      <Position>10</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="103" parent="25" name="mobile_battery">
+      <Position>11</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="104" parent="25" name="mobile_rom">
+      <Position>12</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="105" parent="25" name="mobile_color">
+      <Position>13</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="106" parent="25" name="PRIMARY">
+      <ColNames>mobileGoods_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

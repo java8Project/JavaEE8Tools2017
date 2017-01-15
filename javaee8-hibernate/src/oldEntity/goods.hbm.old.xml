@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="qin.javaee8.domain" auto-import="true" default-lazy="false">
+
+    <class name="Goods" table="goods8">
+        <id name="id" type="long">
+            <generator class="increment"/>
+        </id>
+
+        <discriminator column="type"/>
+
+        <!-- 名称 -->
+        <property name="goods_name" length="30" not-null="true"></property>
+
+        <!-- 价格 -->
+        <property name="goods_price" length="30" not-null="true" type="double"></property>
+
+        <!-- 配送地区 -->
+        <property name="goods_sendLocation" length="40" not-null="true"></property>
+
+        <!-- 重量 -->
+        <property name="goods_weight" length="10" not-null="true"></property>
+
+        <!-- 购买数量 -->
+        <property name="goods_buyAmount" length="30" not-null="true"></property>
+
+        <!-- 产地 -->
+        <property name="goods_makeLocation" length="40" not-null="true"></property>
+
+        <!-- 介绍 -->
+        <property name="goods_introduction" length="5000"></property>
+
+        <subclass name="MobileGoods" discriminator-value="p">
+            <!-- 品牌 -->
+            <property name="mobile_type" length="40"></property>
+
+            <!-- 型号 -->
+            <property name="mobile_model" length="30"></property>
+
+            <!-- 机身颜色 -->
+            <property name="mobile_color" length="30"></property>
+
+            <!-- 机身长度 -->
+            <property name="mobile_height" type="double"></property>
+
+            <!-- 机身厚度 -->
+            <property name="mobile_land" type="double"></property>
+
+            <!-- 操作系统 -->
+            <property name="mobile_os" length="30"></property>
+
+            <!-- cpu信息 -->
+            <property name="mobile_cpu" length="3000"></property>
+
+            <!-- 4g网络 -->
+            <property name="mobile_4G" length="200"></property>
+
+            <!-- 手机存储内存 -->
+            <property name="mobile_memory" length="3000"></property>
+
+            <!-- 屏幕尺寸 -->
+            <property name="mobile_size" length="50"></property>
+
+            <!-- 屏幕分辨率 -->
+            <property name="mobile_resolution" length="50"></property>
+
+            <!-- 摄像头信息 -->
+            <property name="mobile_camera" length="50"></property>
+
+            <!-- 辅助功能 -->
+            <property name="mobile_otherFunction" length="9000"></property>
+
+            <!-- 图片 -->
+            <map name="images" table="goods_imagesMap" cascade="delete">
+                <key column="key_goods_images" foreign-key="fk_goods_images"></key>
+                <index column="index_goods_images" type="integer"/>
+                <element column="element_goods_images" type="string" length="9000"/>
+            </map>
+
+        </subclass>
+
+    </class>
+
+    <!--
+     <class name="com.src.hibernate.Animal" table="t_animal">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+         加入鉴别标签，且必须放在id后面
+    <discriminator column="type" />
+    <property name="name"/>
+    <property name="sex" type="boolean"/>
+
+    <subclass name="com.src.hibernate.Pig" discriminator-value="P">
+        <property name="weight"/>
+    </subclass>
+    <subclass name="com.src.hibernate.Bird" discriminator-value="B">
+        <property name="height"/>
+    </subclass>
+</class>
+
+        -->
+
+</hibernate-mapping>
