@@ -201,4 +201,24 @@ public class MobileGoods extends SuperGoods
     //endregion
 
     //endregion
+
+    //region toString
+
+    @Override
+    public String toString()
+    {
+        final StringBuilder sb = new StringBuilder("MobileGoods{");
+        sb.append("mobile_os='").append(mobile_os).append('\'');
+        sb.append(", mobile_memory='").append(mobile_memory).append('\'');
+        sb.append(", mobile_frontCamera='").append(mobile_frontCamera).append('\'');
+        sb.append(", mobile_news='").append(mobile_news).append('\'');
+        sb.append(", mobile_backCamera='").append(mobile_backCamera).append('\'');
+        sb.append(", mobile_battery='").append(mobile_battery).append('\'');
+        sb.append(", mobile_rom='").append(mobile_rom).append('\'');
+        sb.append(", mobile_color='").append(mobile_color).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
+
+    //endregion
 }

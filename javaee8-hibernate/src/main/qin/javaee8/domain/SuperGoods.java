@@ -35,6 +35,7 @@ public class SuperGoods implements SuperEntity8<Long>
     //region 商品必备属性
 
     //region 商品编号
+    /** 商品编号 */
     private Long goods_number;
 
     public Long getGoods_number()

@@ -2,28 +2,12 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="8" uuid="b204483c-0db7-4ae3-9737-538e4b2d353f">
-      <database-info product="MySQL" version="5.7.16-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>tongange</user-name>
-      <introspection-schemas>*:javaee8_2017,zhly</introspection-schemas>
-      <resolve-scope>*:javaee8_2017</resolve-scope>
-      <unqualified-resolve-schemas>*:javaee8_2017</unqualified-resolve-schemas>
     </data-source>
     <data-source name="@localhost" uuid="92605ba5-ce8b-48b0-ad4a-dbdff58e14e2">
-      <database-info product="Oracle" version="Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production&#10;With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options" jdbc-version="4.0" driver-name="Oracle JDBC driver" driver-version="12.1.0.2.0">
-        <extra-name-characters>$#</extra-name-characters>
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>system</user-name>
-      <introspection-schemas>*:SYSTEM</introspection-schemas>
-      <resolve-scope>*:PUBLIC,SYSTEM</resolve-scope>
-      <unqualified-resolve-schemas>*:PUBLIC,SYSTEM</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

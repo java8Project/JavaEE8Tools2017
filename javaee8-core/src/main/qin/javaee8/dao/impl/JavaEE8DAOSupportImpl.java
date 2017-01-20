@@ -17,12 +17,19 @@ public class JavaEE8DAOSupportImpl<T extends JavaEE8BaseSupport, ID extends Seri
 {
     //region 注入Session工厂
 
+    private SessionFactory sessionFactory;
+
+    @Override
+    public SessionFactory getSessionFactory()
+    {
+        return sessionFactory;
+    }
+
     @Resource
     @Override
     public void setSessionFactory(SessionFactory sessionFactory)
     {
-        super.setSessionFactory(sessionFactory);
+        this.sessionFactory = sessionFactory;
     }
-
     //endregion
 }
